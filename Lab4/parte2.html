@@ -1,0 +1,30 @@
+<script>
+    function Submit(){
+       var a = document.getElementById("Correo").value;
+       console.log(a);
+       var b = document.getElementById("Contraseña").value;
+       console.log(b); 
+    }
+</script>
+
+
+<html>
+    <head>
+        <h1>Laboratorio 4 - Parte 2
+        </h1>
+    </head>
+    <body>
+        <form >
+            <div>
+                <label for="Correo">Correo</label>
+                <input type="email" id="Correo">
+            </div>
+            <div>
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="Contraseña">
+            </div>
+            <button onclick="Submit()">Introducir</button>
+        </form>
+    </body>
+ 
+</html>
