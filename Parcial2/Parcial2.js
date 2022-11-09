@@ -1,4 +1,4 @@
-let array = [
+let ArrPir = [
     [75],
     [95, 64],
     [17, 47, 82],
@@ -16,19 +16,19 @@ let array = [
     [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23],
   ];
   
-  prmd();
+  Pirm();
   
-  function prmd(){
-    let contador = 0;
-    const div = document.getElementById("piramide");
+  function Pirm(){
+    let count = 0;
+    const div = document.getElementById("Pirm");
     array.forEach((rows) => {
-      contador ++;
+      count ++;
       const parentDiv = document.createElement("div");
-      parentDiv.id = "parent" + contador;
+      parentDiv.id = "parent" + count;
       div.appendChild(parentDiv);
       rows.forEach((column) => {
   
-        const divParent = document.getElementById("parent" + contador);
+        const divParent = document.getElementById("parent" + count);
         const childDiv = document.createElement("div");
         childDiv.textContent = column;
         divParent.appendChild(childDiv);
@@ -36,13 +36,13 @@ let array = [
     });
 }
 
-  function calculo(array, i, j) {
-    
+  function Calc(ArrPir, i, j) {
+    array=ArrPir;
     if (i == array.length) {
       return 0;
     }
 
-    let sumar;
-    sumar = array[i][j] + math.max(clr(array, i + 1, j), clr(array, i + 1, j + 1));
-    return sumar;
+    let sum;
+    sum = array[i][j] + math.max(clr(array, i + 1, j), clr(array, i + 1, j + 1));
+    return sum;
   }
